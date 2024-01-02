@@ -4,43 +4,115 @@ import { Box, Paper, Typography, Container } from '@mui/material/';
 const Footer: React.FC = () => {
   return (
     <Paper
-      elevation={3}
+      elevation={0}
       sx={{
-        backgroundColor: 'primary.main',
+        backgroundColor: '#743B9C',
         color: 'white',
-        padding: 2,
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
+        padding: 0,
+        margin: 0
       }}
     >
       <Container
+        disableGutters
         sx={{
           display: 'flex',
           width: '100%',
           justifyContent: 'space-between',
-          marginBottom: 2,
+          backgroundColor: 'white'
         }}
       >
         <Box
           sx={{
-            backgroundColor: 'red',
-            padding: 1,
+            backgroundColor: '#743B9C',
+            paddingTop: 2,
             flexBasis: '34%',
             flexGrow: 1,
+            borderRadius: '0 100px 0 0',
           }}
         >
-          <Typography variant="body1">Left Title</Typography>
+          <Typography
+            variant="h6"
+            noWrap
+            component="a"
+            href="#app-bar-with-responsive-menu"
+            sx={{
+              fontFamily: 'monospace',
+              fontWeight: 700,
+              letterSpacing: '.1rem',
+              color: 'white',
+              textDecoration: 'none',
+              display: { xs: 'none', md: 'flex' },
+              padding: '0px 0px 0px 40px',
+              alignItems: 'center',
+            }}
+          >
+            <img
+              src="./logo.png"
+              alt="Logo"
+              style={{ marginRight: '8px', width: '24px', height: '24px' }}
+            />
+            SMK ADHIKAWACANA
+          </Typography>
         </Box>
         <Box
           sx={{
             backgroundColor: 'white',
-            padding: 1,
             flexBasis: '66%',
             flexGrow: 1,
+            borderRadius: '0 0 0 100px',
+
           }}
         >
-          <Typography variant="body1">Right Title</Typography>
+        </Box>
+      </Container>
+      <Container
+        disableGutters
+        sx={{
+          display: 'flex',
+          width: '100%',
+          justifyContent: 'space-between',
+          backgroundColor: '#743B9C',
+        }}
+      >
+        <Box
+          sx={{
+            backgroundColor: '#743B9C',
+            paddingTop: 4,
+            flexBasis: '34%',
+            flexGrow: 1,
+            borderRadius: '0 0 0 0',
+          }}
+        >
+          <Typography
+            variant="h6"
+            noWrap
+            component="a"
+            href="#app-bar-with-responsive-menu"
+            sx={{
+              fontFamily: 'monospace',
+              fontWeight: 700,
+              letterSpacing: '.1rem',
+              color: 'white',
+              textDecoration: 'none',
+              display: { xs: 'none', md: 'flex' },
+              padding: '0px 0px 0px 64px',
+              alignItems: 'center',
+            }}
+          >
+          </Typography>
+        </Box>
+        <Box
+          sx={{
+            backgroundColor: 'white',
+            flexBasis: '66%',
+            flexGrow: 1,
+            borderRadius: '0 0 0 100px',
+
+          }}
+        >
         </Box>
       </Container>
       <Container
@@ -58,7 +130,9 @@ const Footer: React.FC = () => {
               marginBottom: 2,
               textAlign: 'left',
               paddingTop: 2,
-              paddingBottom: 5
+              paddingBottom: 5,
+              paddingLeft: '32px'
+
             }}
           >
             <Typography variant="body2">Item {index}</Typography>

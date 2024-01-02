@@ -1,7 +1,6 @@
 import { useState } from 'react'
 import { AppBar, Box, Toolbar, IconButton, Typography, Menu, MenuItem, Container, Button } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
-import AdbIcon from '@mui/icons-material/Adb';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import EmailIcon from '@mui/icons-material/Email';
@@ -44,12 +43,17 @@ function Navbar() {
                             textDecoration: 'none',
                             display: { xs: 'none', md: 'flex' },
                             margin: '0 40px 0 0',
-                            padding: '0px 96px 0px 64px',
+                            padding: '0px 96px 0px 40px',
                             borderRadius: '0 0 100px 0',
                             height: '70px',
                             alignItems: 'center',
                         }}
                     >
+                        <img
+                            src="./logo.png"
+                            alt="Logo"
+                            style={{ marginRight: '8px', width: '24px', height: '24px' }}
+                        />
                         SMK ADHIKAWACANA
                     </Typography>
 
@@ -91,7 +95,6 @@ function Navbar() {
 
                         </Menu>
                     </Box>
-                    <AdbIcon sx={{ display: { xs: 'flex', md: 'none', color: 'black' }, mr: 1 }} />
                     <Typography
                         variant="h6"
                         noWrap
@@ -109,6 +112,11 @@ function Navbar() {
                             alignItems: 'center',
                         }}
                     >
+                        <img
+                            src="./logo.png"
+                            alt="Logo"
+                            style={{ marginRight: '8px', width: '24px', height: '24px' }}
+                        />
                         SMK ADHIKAWACANA
                     </Typography>
                     <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex', color: 'black' } }}>
