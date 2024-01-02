@@ -1,9 +1,10 @@
-
-
+import Hero from "./Hero";
+import Phase2 from './Phase2'
 const Home = () => {
   return (
     <>
-      Hello World
+      <Hero/>
+      <Phase2/>
     </>
   );
 }
