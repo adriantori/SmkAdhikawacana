@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { AppBar, Box, Toolbar, IconButton, Typography, Menu, MenuItem, Container, Button } from '@mui/material';
+import { AppBar, Box, Toolbar, IconButton, Typography, Menu, MenuItem, Container, Button, useTheme } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import FacebookIcon from '@mui/icons-material/Facebook';
@@ -15,6 +15,8 @@ const pages = [
 ];
 
 function Navbar() {
+    const theme = useTheme();
+
     const [anchorElNav, setAnchorElNav] = useState<null | HTMLElement>(null);
 
     const handleOpenNavMenu = (event: React.MouseEvent<HTMLElement>) => {
@@ -26,8 +28,12 @@ function Navbar() {
     };
 
     return (
-        <AppBar position="static" sx={{ backgroundColor: '#fff' }}>
-            <Container maxWidth="xl" disableGutters>
+        <AppBar elevation={0} position="static" sx={{ backgroundColor: '#fff' }}>
+            <Container maxWidth="xl" disableGutters sx={{
+          [theme.breakpoints.up('lg')]: {
+            // Use a custom breakpoint (in this case, 'lg') to override the default max-width
+            maxWidth: '100%',
+          },}}>
                 <Toolbar disableGutters>
                     <Typography
                         variant="h6"
@@ -52,7 +58,7 @@ function Navbar() {
                         <img
                             src="./logo.png"
                             alt="Logo"
-                            style={{ marginRight: '8px', width: '24px', height: '24px' }}
+                            style={{ marginRight: '8px', width: '56px', height: '24px' }}
                         />
                         SMK ADHIKAWACANA
                     </Typography>

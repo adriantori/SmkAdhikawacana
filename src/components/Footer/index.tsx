@@ -1,10 +1,10 @@
 import React from 'react';
-import { Box, Paper, Typography, Container } from '@mui/material/';
+import { Box, Typography, Container, useTheme  } from '@mui/material/';
 
 const Footer: React.FC = () => {
+  const theme = useTheme();
   return (
-    <Paper
-      elevation={0}
+    <Container
       sx={{
         backgroundColor: '#743B9C',
         color: 'white',
@@ -12,8 +12,17 @@ const Footer: React.FC = () => {
         flexDirection: 'column',
         alignItems: 'center',
         padding: 0,
-        margin: 0
+        margin: 0,
+        position: 'fixed',
+        bottom: 0,
+        left: 0,
+        right: 0,
+        [theme.breakpoints.up('lg')]: {
+          // Use a custom breakpoint (in this case, 'lg') to override the default max-width
+          maxWidth: '100%',
+        },
       }}
+      disableGutters
     >
       <Container
         disableGutters
@@ -21,14 +30,18 @@ const Footer: React.FC = () => {
           display: 'flex',
           width: '100%',
           justifyContent: 'space-between',
-          backgroundColor: 'white'
+          backgroundColor: 'white',
+          [theme.breakpoints.up('lg')]: {
+            // Use a custom breakpoint (in this case, 'lg') to override the default max-width
+            maxWidth: '100%',
+          },
         }}
       >
         <Box
           sx={{
             backgroundColor: '#743B9C',
             paddingTop: 2,
-            flexBasis: '34%',
+            flexBasis: '45%',
             flexGrow: 1,
             borderRadius: '0 100px 0 0',
           }}
@@ -40,30 +53,28 @@ const Footer: React.FC = () => {
             href="#app-bar-with-responsive-menu"
             sx={{
               fontFamily: 'monospace',
-              fontWeight: 700,
-              letterSpacing: '.1rem',
+              fontWeight: 400,
               color: 'white',
               textDecoration: 'none',
               display: { xs: 'none', md: 'flex' },
-              padding: '0px 0px 0px 40px',
+              padding: '0px 96px 0px 40px',
               alignItems: 'center',
             }}
           >
             <img
               src="./logo.png"
               alt="Logo"
-              style={{ marginRight: '8px', width: '24px', height: '24px' }}
-            />
+              style={{ marginRight: '8px', width: '56px', height: '24px' }}
+              />
             SMK ADHIKAWACANA
           </Typography>
         </Box>
         <Box
           sx={{
             backgroundColor: 'white',
-            flexBasis: '66%',
+            flexBasis: '55%',
             flexGrow: 1,
             borderRadius: '0 0 0 100px',
-
           }}
         >
         </Box>
@@ -75,13 +86,17 @@ const Footer: React.FC = () => {
           width: '100%',
           justifyContent: 'space-between',
           backgroundColor: '#743B9C',
+          [theme.breakpoints.up('lg')]: {
+            // Use a custom breakpoint (in this case, 'lg') to override the default max-width
+            maxWidth: '100%',
+          },
         }}
       >
         <Box
           sx={{
             backgroundColor: '#743B9C',
             paddingTop: 4,
-            flexBasis: '34%',
+            flexBasis: '45%',
             flexGrow: 1,
             borderRadius: '0 0 0 0',
           }}
@@ -107,10 +122,10 @@ const Footer: React.FC = () => {
         <Box
           sx={{
             backgroundColor: 'white',
-            flexBasis: '66%',
+            flexBasis: '55%',
             flexGrow: 1,
             borderRadius: '0 0 0 100px',
-
+            marginRight: '0'
           }}
         >
         </Box>
@@ -120,6 +135,10 @@ const Footer: React.FC = () => {
           display: 'flex',
           width: '100%',
           justifyContent: 'space-between',
+          [theme.breakpoints.up('lg')]: {
+            // Use a custom breakpoint (in this case, 'lg') to override the default max-width
+            maxWidth: '100%',
+          },
         }}
       >
         {[1, 2, 3, 4, 5, 6].map((index) => (
@@ -140,7 +159,7 @@ const Footer: React.FC = () => {
           </Box>
         ))}
       </Container>
-    </Paper>
+    </Container>
   );
 };
 

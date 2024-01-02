@@ -1,6 +1,6 @@
 import { Outlet } from 'react-router-dom';
 import { Navbar, Footer } from '../../components';
-import { CssBaseline, Container, Paper } from '@mui/material';
+import { CssBaseline, Container } from '@mui/material';
 
 const PublicLayout = () => {
   return (
@@ -8,9 +8,7 @@ const PublicLayout = () => {
       <CssBaseline />
       <Navbar />
       <Container style={{ flex: 1 }}>
-        <Paper elevation={0} style={{ marginTop: '0px'}}>
           <Outlet />
-        </Paper>
       </Container>
       <Footer />
     </div>
