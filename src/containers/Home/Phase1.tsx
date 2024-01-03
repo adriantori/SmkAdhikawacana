@@ -10,7 +10,9 @@ const Phase1 = () => {
         <Typography variant="h4" sx={{fontWeight: 700, color: "#874AB1"}}>
           KENAPA HARUS SMEKDHIWA ?
         </Typography>
-        <Typography variant="h6" sx={{ mt: 10, mb:10}}>
+        <Typography variant="h6" sx={{ mt: 10, mb:10, '@media (max-width: 600px)': {
+        mt:5
+      } }}>
           Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ducimus dignissimos molestiae molestias laborum dolorem quas natus, numquam temporibus reiciendis nostrum ullam. Perspiciatis quia veritatis nobis sunt, ullam quasi qui placeat?
         </Typography>
       </Box>
