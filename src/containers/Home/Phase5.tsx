@@ -1,4 +1,3 @@
-import React from 'react';
 import { Container, Box, Typography, Grid } from '@mui/material';
 
 const Phase5 = () => {
