@@ -12,16 +12,19 @@ const Hero: React.FC = () => {
                 }}
             >
                 <Box sx={{}}>
-                    <Typography variant="h5" sx={{ fontWeight: 900 }}>
+                    <Typography variant="h5" sx={{ fontWeight: 900, color: '#874AB1' }}>
                         <b>SAMBUTAN KEPALA SEKOLAH</b>
                     </Typography>
-                    <Typography variant="h6" sx={{ marginBottom: '32px' }}>
+                    <Typography variant="h6" sx={{ marginBottom: '32px', color: '#471DA5', fontWeight: 600 }}>
                         <i>Nama Kepala Sekolah</i>
                     </Typography>
                 </Box>
 
-                <Box sx={{backgroundColor:'F9DEC3'}}>
-                    <Typography variant="body1" paragraph sx={{ mr: 10 }}>
+                <Box sx={{backgroundColor:'#F9DEC3', height:'30vw', padding:'15px', paddingTop:'30px', borderRadius:'20px'}}>
+                    <Typography variant='h5' sx={{fontWeight: '800', mb:2}}>
+                        Title
+                    </Typography>
+                    <Typography variant="body1" paragraph sx={{ textAlign: 'justify' }}>
                         Description goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                         Phasellus vehicula justo nec justo tristique, ut aliquam odio malesuada.
                     </Typography>
@@ -37,7 +40,7 @@ const Hero: React.FC = () => {
                 }}
             >
                 <img
-                    src="https://placehold.co/600x500/EEE/31343C"
+                    src="https://placehold.co/500x400/EEE/31343C"
                     alt="Image"
                     style={{ maxWidth: '100%', maxHeight: '100%', objectFit: 'cover' }}
                 />
