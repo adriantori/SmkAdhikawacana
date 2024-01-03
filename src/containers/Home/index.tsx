@@ -6,6 +6,7 @@ import Phase3 from './Phase3';
 import Phase4 from "./Phase4";
 import Phase5 from './Phase5';
 import Phase6 from './Phase6';
+import Phase7 from './Phase7';
 
 const Home = () => {
   return (
@@ -23,6 +24,8 @@ const Home = () => {
       <Phase5/>
       <Divider/>
       <Phase6/>
+      <Divider/>
+      <Phase7/>
     </>
   );
 }
