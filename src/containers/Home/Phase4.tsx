@@ -23,7 +23,7 @@ const Phase4 = () => {
             display: "flex",
             flexDirection: "row",
             justifyContent: "space-around",
-            gap: "10px",
+            gap: "20px",
             flexWrap: isTablet ? "wrap" : "nowrap",}}>
           <ProgramCard imageUrl="https://placehold.co/300x300/000/31343C" description="lalallalal lalallala" />
           <ProgramCard imageUrl="https://placehold.co/300x300/000/31343C" description="lalallalal lalallala" />
